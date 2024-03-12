@@ -1,0 +1,440 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arvo', serif;
+	background-color: #DEECF5;
+}
+/* CSS da página principal*/
+#principal{
+	display: grid;
+	grid-template-rows: 12vh 50vh 20vh 30vh 20vh ;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+						 "nada foto nada2"
+						 "nada texto nada2"
+						 "nada op nada2"
+						 "footer footer footer";
+}
+/* Cabeçalho*/ 
+header{
+	grid-area: header;
+	background-color: #0052CB;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu{
+	background-color:#0052CB ;
+	margin-right: 20px;
+}
+.menu ul{
+	list-style-type: none;
+	color: #FFFFFF;
+	font-size: 25px;
+}
+.menu ul li{
+	background-color: #0052CB;
+	position: relative;
+}
+.menu ul li:hover{
+	background-color: #ffffff;
+	color:#0052CB ;
+}
+/* sub menu */
+.menu ul ul{
+	display: none;
+}
+.menu ul li:hover ul {
+	right: 0;
+	position: absolute;
+    display: block;
+}
+.menu ul li ul li a{
+	text-decoration: none;
+	background-color:  #0052CB;
+	font-size: 25px;
+	color: #FFFFFF;
+}
+.menu ul li ul li a:hover{
+	background-color: #ffffff;
+	color:#0052CB ;
+}
+
+div#logo img{
+	background-color: #FFFFFF;
+	width: 170px;
+	height: 50px;
+	border-radius: 10px;
+
+}
+#logo{
+	margin-left: 10px;
+	width: 204px;
+	height: 60px;
+
+	background-color: #FFFFFF;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#nada{
+	grid-area: nada;
+}
+#nada2{
+	grid-area: nada2;
+}
+/* parte foto*/
+#foto{
+	grid-area: foto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#img{
+	height: 50vh;
+	width: 50%;
+	border-radius: 15px;
+}
+/* parte do texto*/
+section#texto p{
+	color: #FF0000;
+	font-size: 22px;
+}
+#texto{
+	grid-area: texto;
+}
+/*Lista da página sobre o enem*/
+section#texto ul{
+	color: #FF0000;
+	font-size: 23px;
+}
+/* parte dos botões*/
+#op{
+	grid-area: op;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.botao{
+	font-weight: bold;
+	font-size: 45px;
+	color: #FE0000;
+	font-style: italic;
+	width: 250px;
+	height: 112.19px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px #0052CB;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer	;
+}
+/*rodapé */
+footer{
+	background: #0052CB;
+	grid-area: footer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+footer h3{
+	background: #0052CB;
+	color:  #FFFFFF ;
+}
+footer div{
+	background: #0052CB;
+}
+footer p{
+	background: #0052CB;
+	color:  #FFFFFF ;
+}
+.icone{
+	background-color: #0052CB;
+	width: 60px;
+	height: 60px;
+}
+
+/* CSS das outras páginas*/
+.container2{
+	display: grid;
+	grid-template-rows: 12vh 28vh 55vh 20vh;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+				"nada titulo nada2 "
+				"nada texto nada2"
+				"footer footer footer";
+
+}
+.container3{
+	display: grid;
+	grid-template-rows: 12vh 28vh 125vh 20vh;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+				"nada titulo nada2 "
+				"nada texto nada2"
+				"footer footer footer";
+
+}
+.container4{
+	display: grid;
+	grid-template-rows: 12vh 28vh auto auto auto;
+	grid-template-columns: 10% 80% 10%;
+	grid-template-areas: "header header header"
+				"nada titulo nada2 "
+				"nada texto nada2"
+				"nada outrotexto nada2"
+				"footer footer footer";
+
+}
+#espacodotitulo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#titulo{
+	grid-area: titulo;
+	width: 76%;
+	height: 18vh;
+	background-color: #FFFFFF;
+	box-shadow: 0px 4px 4px #0052CB;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div#titulo h1{
+	color: #FE0000;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 60px;
+}
+/* Texto das outras páginas*/
+.outrotexto{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	grid-area: outrotexto;
+	color: #FF0000;
+	font-size: 22px;
+}
+/* botões e SPA */
+.outrotexto .lista button{
+	margin-top: 2px;
+	margin-left: 60px;
+	color: #FF0000;
+	font-size: 22px;
+	border: 2px solid #FF0000 ;
+	border-radius: 10px;
+	cursor: pointer	;
+}
+section.outrotexto .lista .invisivel{
+	display: none;
+}
+section.outrotexto .lista .visivel{
+	display: block;
+}
+section.outrotexto .lista{
+	display: flex;
+	flex-direction: column;
+}
+#texto .lista button{
+	margin-top: 2px;
+	margin-left: 60px;
+	color: #FF0000;
+	font-size: 22px;
+	border: 2px solid #FF0000 ;
+	border-radius: 10px;
+	cursor: pointer	;
+}
+section#texto .lista .invisivel{
+	display: none;
+}
+section#texto .lista .visivel{
+	display: block;
+}
+section#texto .lista{
+	display: flex;
+	flex-direction: column;	
+}
+[id*="especifico"] ul{
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+[id*="especifico"] ul li{
+	font-size: 18px;
+}
+[id*="facu"] ul{
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+[id*="facu"] ul li{
+	font-size: 18px;
+}
+
+/* Media Queries*/
+@media(min-width: 652px) and (max-width: 930px){
+	#img{
+	height: 50vh;
+	width: 100%;
+	border-radius: 15px;
+	}
+	#principal{
+	display: grid;
+	grid-template-rows: 12vh 50vh 30vh 30vh 20vh ;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+						 "nada foto nada2"
+						 "nada texto nada2"
+						 "nada op nada2"
+						 "footer footer footer";
+	}
+	#op{
+	grid-area: op;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	}
+	.botao{
+		font-weight: bold;
+		font-size: 45px;
+		color: #FE0000;
+		font-style: italic;
+		width: 250px;
+		height: 112.19px;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 4px #0052CB;
+		border-radius: 30px;
+		border: none;
+	}
+}
+@media (max-width: 850px){
+	#principal{
+	display: grid;
+	grid-template-rows: 12vh 50vh 30vh 60vh 20vh ;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+						 "nada foto nada2"
+						 "nada texto nada2"
+						 "nada op nada2"
+						 "footer footer footer";
+	}
+	#op{
+	grid-area: op;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	}
+	.botao{
+		font-weight: bold;
+		font-size: 40px;
+		color: #FE0000;
+		font-style: italic;
+		width: 400px;
+		height: 105px;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 4px #0052CB;
+		border-radius: 30px;
+		border: none;
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 520px) and (max-width: 652px){
+	#principal{
+	display: grid;
+	grid-template-rows: 12vh 50vh 40vh 60vh 20vh ;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+						 "nada foto nada2"
+						 "nada texto nada2"
+						 "nada op nada2"
+						 "footer footer footer";
+	}
+	#img{
+	height: 50vh;
+	width: 100%;
+	border-radius: 15px;
+	}
+
+}
+@media (max-width: 520px){
+	#img{
+	height: 50vh;
+	width: 100%;
+	border-radius: 15px;
+	}
+	#principal{
+	display: grid;
+	grid-template-rows: 12vh 50vh 50vh 60vh 20vh ;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+						 "nada foto nada2"
+						 "nada texto nada2"
+						 "nada op nada2"
+						 "footer footer footer";
+	}
+}
+@media (max-width: 1130px){
+	.container3{
+	display: grid;
+	grid-template-rows: 12vh 28vh auto auto;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+				"nada titulo nada2 "
+				"nada texto nada2"
+				"footer footer footer";
+
+	}
+	#texto {
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 1070px){
+	.container2{
+	display: grid;
+	grid-template-rows: 12vh 28vh auto auto;
+	grid-template-columns: 12% 76% 12%;
+	grid-template-areas: "header header header"
+				"nada titulo nada2 "
+				"nada texto nada2"
+				"footer footer footer";
+
+	}
+}
+@media(max-width: 550px){
+	#titulo{
+		width: auto;
+	}
+}
+@media (max-width: 980px){
+	#titulo{
+	width: 90%;
+	height: 24vh;
+	background-color: #FFFFFF;
+	box-shadow: 0px 4px 4px #0052CB;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    }
+    div#titulo h1{
+	color: #FE0000;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 55px;
+	}
+}
